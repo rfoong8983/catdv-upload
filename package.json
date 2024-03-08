@@ -1,0 +1,13 @@
+{
+  "name": "catdv-upload",
+  "version": "1.0.0",
+  "description": "testing catdv upload endpoint",
+  "main": "index.js",
+  "repository": "https://github.com/rfoong8983/catdv-upload.git",
+  "author": "rfoong8983",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "catdv": "^3.7.0"
+  }
+}
