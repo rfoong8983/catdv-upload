@@ -11,6 +11,9 @@ var CATDV_SERVER_PORT = 0;
 // use api user and pass here
 var REST_USER = "";
 var REST_PASSWORD = "";
+
+// use for debugging
+var LOG_REQUESTS=true;
 /*-------------------------------------------*/
 function uploadFile(filePath, fileSize, uploadURL, uploadSession, callback) {
     var ticket = uploadSession.ticket;
@@ -95,7 +98,7 @@ var filename = path.basename(filePath);
 console.log('\n\nfilename: ', filename);
 var fileSize = fs.statSync(filePath).size;
 console.log('\n\nfileSize: ', fileSize);
-var $catdv = new catdv.RestApi(CATDV_SERVER_HOST, CATDV_SERVER_PORT);
+var $catdv = new catdv.RestApi(CATDV_SERVER_HOST, CATDV_SERVER_PORT, LOG_REQUESTS);
 
 try {
     console.log('logging in...\n\n')
