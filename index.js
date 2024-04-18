@@ -1,6 +1,6 @@
 var fs = require("fs");
 var path = require("path");
-var http = require("http");
+var https = require("https");
 var url = require("url");
 var catdv = require("catdv");
 var URL = url.URL;
@@ -45,7 +45,7 @@ function uploadFile(filePath, fileSize, uploadURL, uploadSession, callback) {
             console.log('chunkSize: ', chunkSize);
             console.log('\n\nsending request...');
 
-            var req = http.request(requestSpec, function (res) {
+            var req = https.request(requestSpec, function (res) {
                 if (res.statusCode == 200) {
                     console.log('STATUS: ' + res.statusCode);
                     var jsonReply = "";
